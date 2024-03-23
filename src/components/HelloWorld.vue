@@ -17,6 +17,7 @@ defineProps({
     </h3>
 
     <TodoDeleteButton />
+    <div>{{ foo }}</div>
   </div>
 </template>
 

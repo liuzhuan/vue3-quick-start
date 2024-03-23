@@ -9,6 +9,7 @@ const app = createApp(App)
 app.config.errorHandler = (err) => {
     console.log('global error handler', err)
 }
+app.config.globalProperties.foo = 'bar'
 
 app.component('TodoDeleteButton', TodoDeleteButton)
 
