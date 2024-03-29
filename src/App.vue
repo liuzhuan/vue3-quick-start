@@ -1,9 +1,9 @@
 <script setup>
-import MyForm from './components/MyForm.vue'
+import AnswerBook from './components/AnswerBook.vue'
 </script>
 
 <template>
   <div>
-    <MyForm />
+    <AnswerBook />
   </div>  
 </template>
