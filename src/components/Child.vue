@@ -1,20 +1,20 @@
 <template>
     <div>
-        Child
+      <h1 class="title">Counter</h1>
+      <button @click="count++">
+        clicked {{ count }} times
+      </button>
     </div>
-</template>
-
-<script setup>
-import { ref } from 'vue'
-
-const foo = ref('baz')
-
-function sayHi() {
-    console.log('say hi')
-}
-
-defineExpose({
-    foo,
-    // sayHi,
-})
-</script>
+  </template>
+  
+  <script setup>
+  import { ref } from 'vue'
+  
+  const count = ref(0)
+  </script>
+  
+  <style>
+  .title {
+    color: steelblue;
+  }
+  </style>
