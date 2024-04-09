@@ -1,18 +1,21 @@
+<!-- Parent.vue -->
 <template>
-  <div>
-    <BlogPost title="Hello world" @enlarge-text="handleEnlargeText" />
-    <BlogPost title="Foobar" />
-    <BlogPost title="Thanks" />
-  </div>
+  <component :is="activeComponent" />
+  <button @click="handleToggle">toggle</button>
 </template>
 
 <script setup>
-import BlogPost from './components/BlogPost.vue'
 import { ref } from 'vue'
+import Foo from './components/Foo.vue'
+import Bar from './components/Bar.vue'
 
-const title = ref('hello world')
+const activeComponent = ref(Foo)
 
-function handleEnlargeText() {
-  console.log('handle enlarge text')
+function handleToggle() {
+  if (activeComponent.value === Foo) {
+    activeComponent.value = Bar
+  } else {
+    activeComponent.value = Foo
+  }
 }
 </script>
