@@ -1,16 +1,10 @@
-import './assets/main.css'
-
 import { createApp } from 'vue'
 import App from './App.vue'
-import TodoDeleteButton from './components/TodoDeleteButton.vue'
 
 const app = createApp(App)
 
-app.config.errorHandler = err => {
-  console.log('global error handler', err)
-}
-app.config.globalProperties.foo = 'bar'
-
-app.component('TodoDeleteButton', TodoDeleteButton)
+app.config.globalProperties.yourNumber = 9527
+app.config.globalProperties.greeting = name =>
+  `Hello, ${name}!`
 
 app.mount('#app')
